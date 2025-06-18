@@ -17,15 +17,13 @@ function Login() {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="p-4">
+      <h2 className="text-xl font-bold mb-2">Login</h2>
       <form onSubmit={handleLogin}>
-        <input type="email" placeholder="Email" value={email}
-               onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" value={password}
-               onChange={(e) => setPassword(e.target.value)} required />
-        <button type="submit">Login</button>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="border p-2 mr-2" required />
+        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} className="border p-2 mr-2" required />
+        <button type="submit" className="bg-blue-500 text-white px-4 py-2">Login</button>
+        {error && <p className="text-red-500 mt-2">{error}</p>}
       </form>
     </div>
   );
